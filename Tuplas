@@ -1,0 +1,20 @@
+# EJERCICIO 1 Registro de cordenadas 
+
+cc = int(input("Cuantas cordenadas deseas reguistrar: "))
+
+cordenadas = []
+
+i = 0
+while i < cc:
+    lat = float(input("Ingresa la latitud: "))
+    lon = float(input("Ingresa la longitud: "))
+
+    cordenada = (lat, lon)
+    i += 1
+    cordenadas.append(cordenada)
+
+print("Las cordenadas registradas son: ")
+
+for n, cordenada in enumerate(cordenadas, start = 1):
+    print(f"Cordenada {n}: Latitud = {lat}, Longitud = {lon}")
+print("-" * 20)
