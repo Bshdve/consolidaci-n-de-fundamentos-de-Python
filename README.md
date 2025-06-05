@@ -1,1 +1,0 @@
-# consolidaci-n-de-fundamentos-de-Python

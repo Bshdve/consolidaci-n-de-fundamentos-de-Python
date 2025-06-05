@@ -1,0 +1,32 @@
+#Sistema de registro de estudiantes
+
+cd = int(input("¿Cuántos estudiantes deseas registrar? "))
+
+estudiantes = []
+i = 0
+while i < cd:
+    nombre = input("Ingresa tu nombre: ")
+    edad = int(input("Ingresa tu edad: "))
+    if edad < 0:
+        print("Edad inválida")
+        continue
+    carrera = input("Ingresa tu carrera: ")
+    ciudad = input("Ingresa tu ciudad actual: ")
+
+    estudiante = {
+        "nombre": nombre,
+        "edad": edad,
+        "carrera": carrera,
+        "ciudad": ciudad
+    }
+    estudiantes.append(estudiante)
+    i += 1
+
+
+print("los datos registrados son: ")
+
+for n, estudiante in enumerate(estudiantes, start=1):
+    print(f"Estudiante {n}:")
+    for clave, valor in estudiante.items():
+        print(clave, ":", valor)
+    print("-"*20)
