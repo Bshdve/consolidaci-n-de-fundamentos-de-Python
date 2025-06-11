@@ -1,0 +1,32 @@
+rint("#"*40)
+print("SISTEMA DE REGISTRO DE ASISTENCIA")
+print("#"*40)
+
+asistio = []
+no_asistio = []
+
+ca = int(input("Cantidad de estudiantes:  "))
+
+i = 0
+while i < ca:
+    nombre = input("Ingresa el nombre del estudiante: ")
+    asistencia = input("¿Asistió? (si/no): ").strip().lower()
+
+    if asistencia == "si":
+        asistio.append(nombre)
+    elif asistencia == "no":
+        no_asistio.append(nombre)
+    else:
+        print("Respuesta no válida. Por favor, ingresa 'si' o 'no'.")
+        continue
+
+    i += 1
+
+print("\nResumen de asistencia:")
+
+for nombre in asistio:
+    print(f"{nombre}")
+
+print("\nEstudiantes que no asistieron:")
+for nombre in no_asistio:
+    print(f"{nombre}")
